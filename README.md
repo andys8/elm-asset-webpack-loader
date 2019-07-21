@@ -8,7 +8,7 @@ Webpack loader for assets (like images or fonts) in Elm programming language
 img [ src "require:src/assets/logo.svg" ] []
 ```
 
-## Goal
+## Goals
 
 ### Path safety
 
