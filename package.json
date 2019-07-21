@@ -18,8 +18,11 @@
   },
   "main": "src/index.js",
   "scripts": {
-    "test": "echo 'TODO'"
+    "test": "jest --ci",
+    "test:watch": "jest --watchAll"
   },
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "jest": "24.8.0"
+  }
 }
