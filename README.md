@@ -8,6 +8,38 @@ Webpack loader for assets (like images or fonts) in Elm programming language
 img [ src "require:src/assets/logo.svg" ] []
 ```
 
+## Webpack
+
+* This loader is meant to be run in combination with [`elm-webpack-loader`](https://github.com/elm-community/elm-webpack-loader)
+* The configuration isn't allowed to have `noParse` for elm files
+
+```js
+{
+  test: /\.elm$/,
+  use: [
+    {
+      loader: require.resolve("elm-asset-webpack-loader")
+    },
+    {
+      loader: require.resolve("elm-webpack-loader")
+    }
+  ]
+}
+```
+
+With this configuration other loaders (like this `svg` example) can be used:
+
+```js
+```javascript
+{
+  test: /\.svg$/,
+  loader: require.resolve("file-loader"),
+  options: {
+    name: "static/media/[name].[hash:8].[ext]"
+  }
+}
+```
+
 ## Goals
 
 ### Path safety
