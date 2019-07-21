@@ -1,0 +1,25 @@
+{
+  "name": "elm-asset-webpack-loader",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Webpack loader for assets (like images or fonts) in Elm programming language",
+  "keywords": [
+    "Elm",
+    "images",
+    "assets",
+    "files",
+    "loader",
+    "webpack"
+  ],
+  "author": "andys8",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andys8/elm-asset-webpack-loader"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo 'TODO'"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
