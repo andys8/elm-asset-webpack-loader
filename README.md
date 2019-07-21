@@ -29,7 +29,6 @@ img [ src "require:src/assets/logo.svg" ] []
 
 With this configuration other loaders (like this `svg` example) can be used:
 
-```js
 ```javascript
 {
   test: /\.svg$/,
