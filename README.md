@@ -52,4 +52,5 @@ With this approach any webpack loader can be used. Use cases can be to hash file
 ## Other approaches
 
 * [`elm-assets-loader`](https://github.com/NoRedInk/elm-assets-loader) is a comparable approach, and is probably more sophisticated. The package is marked as deprecated.
-* It's possible to require files in JavaScript and pass them as flags to Elm.
+* [`babel-elm-assets-plugin`](https://github.com/cultureamp/babel-elm-assets-plugin) is using babel. It mentions to disable Elm optimization. This could be because it's using a `String` `type alias`.
+* It's possible to require files in JavaScript and pass them as flags to Elm ([Instructions](https://github.com/halfzebra/create-elm-app/tree/748391d68e5ddaa5e1ae1dca866c68a5e42ff53d/template#adding-images-and-fonts))

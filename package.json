@@ -1,6 +1,6 @@
 {
   "name": "elm-asset-webpack-loader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "description": "Webpack loader for assets (like images or fonts) in Elm programming language",
   "keywords": [
