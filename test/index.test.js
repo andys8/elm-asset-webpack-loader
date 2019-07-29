@@ -30,4 +30,10 @@ describe("elm-asset-webpack-loader", () => {
       before + expectedMiddle + after
     );
   });
+
+  it("throws an error for single `require:` without path", () => {
+    expect(() => {
+      loader("const a = 'require:';");
+    }).toThrowErrorMatchingSnapshot();
+  });
 });
