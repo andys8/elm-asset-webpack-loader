@@ -36,4 +36,27 @@ describe("elm-asset-webpack-loader", () => {
       loader("const a = 'require:';");
     }).toThrowErrorMatchingSnapshot();
   });
+
+  describe("rootContext", () => {
+    beforeEach(() => {
+      window.__rootContext = window.rootContext;
+    });
+
+    afterEach(() => {
+      window.rootContext = window.__rootContext;
+    });
+
+    it("uses rootContext", () => {
+      window.rootContext = "a/b/c";
+      expect(loader("'require:path/file.ext'")).toEqual(
+        "require('a/b/c/path/file.ext')"
+      );
+    });
+
+    it("fallback if none is set", () => {
+      expect(loader("'require:path/file.ext'")).toEqual(
+        "require('../path/file.ext')"
+      );
+    });
+  });
 });
