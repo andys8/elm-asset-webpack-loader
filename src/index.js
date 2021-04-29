@@ -13,6 +13,6 @@ module.exports = function(source) {
   // Replacing custom replace syntax with webpack require call
   const regex = /'require:([^']+)'/g;
   const rootDir = this.rootContext || "..";
-  const replacement = `require('${rootDir}/$1')`;
+  const replacement = `require('${rootDir}/$1')`.replace(/\\/g, '/');
   return source.replace(regex, replacement);
 };
