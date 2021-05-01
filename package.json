@@ -18,11 +18,7 @@
   },
   "main": "src/index.js",
   "scripts": {
-    "test": "jest --ci",
-    "test:watch": "jest --watchAll"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "jest": "24.8.0"
+    "test": "npx jest --ci",
+    "test:watch": "npx jest --watchAll"
   }
 }
