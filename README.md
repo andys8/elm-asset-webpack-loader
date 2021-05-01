@@ -10,8 +10,8 @@ img [ src "require:src/assets/logo.svg" ] []
 
 ## Webpack
 
-* This loader is meant to be run in combination with [`elm-webpack-loader`](https://github.com/elm-community/elm-webpack-loader)
-* The configuration isn't allowed to have `noParse` for elm files
+- This loader is meant to be run in combination with [`elm-webpack-loader`](https://github.com/elm-community/elm-webpack-loader)
+- The configuration isn't allowed to have `noParse` for elm files
 
 ```js
 {
@@ -51,6 +51,12 @@ With this approach any webpack loader can be used. Use cases can be to hash file
 
 ## Prior art and alternatives
 
-* [`elm-assets-loader`](https://github.com/NoRedInk/elm-assets-loader) is a comparable approach, and is more sophisticated. The package is marked as deprecated.
-* [`babel-elm-assets-plugin`](https://github.com/cultureamp/babel-elm-assets-plugin) is using babel. It mentions to disable Elm optimization. This could be because it's using a `String` `type alias`.
-* It's possible to require files in JavaScript and pass them as flags to Elm ([Instructions](https://github.com/halfzebra/create-elm-app/tree/748391d68e5ddaa5e1ae1dca866c68a5e42ff53d/template/README.md#adding-images-and-fonts))
+- [`elm-assets-loader`](https://github.com/NoRedInk/elm-assets-loader) is a comparable approach, and is more sophisticated. The package is marked as deprecated.
+- [`babel-elm-assets-plugin`](https://github.com/cultureamp/babel-elm-assets-plugin) is using babel. It mentions to disable Elm optimization. This could be because it's using a `String` `type alias`.
+- It's possible to require files in JavaScript and pass them as flags to Elm ([Instructions](https://github.com/halfzebra/create-elm-app/tree/748391d68e5ddaa5e1ae1dca866c68a5e42ff53d/template/README.md#adding-images-and-fonts))
+
+## Release
+
+- Bump version in `package.json`
+- [Create a release on github](https://github.com/andys8/elm-asset-webpack-loader/releases/new)
+- [CI will release to NPM](https://github.com/andys8/elm-asset-webpack-loader/blob/master/.github/workflows/publish.yaml)
